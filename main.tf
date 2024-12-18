@@ -1,7 +1,8 @@
-provider "null" {}
+provider "local" {
+  version = "~> 2.0"
+}
 
-resource "null_resource" "hello_world" {
-  provisioner "local-exec" {
-    command = "echo 'Hello World'"
-  }
+resource "local_file" "hello_file" {
+  content  = "hello world"
+  filename = "hello.txt"
 }
