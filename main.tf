@@ -3,6 +3,6 @@ provider "local" {
 }
 
 resource "local_file" "hello_file" {
-  content  = "hello world"
+  content  = "hello world again"
   filename = "hello.txt"
 }
